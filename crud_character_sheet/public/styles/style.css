@@ -1,0 +1,9 @@
+tr:nth-child(even) {background: coral}
+tr:nth-child(odd) {background: #FFF}
+table {
+    width:60%;
+    margin: 2em auto;
+}
+td, th {
+    padding:0.7em;
+}

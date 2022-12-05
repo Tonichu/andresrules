@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de actalización de mi perfil</title>
+</head>
+<body>
+    <form action="/students/<%= student.id %>" method="post">
+        <p>
+            <label for="name_field">Nombre: </label>
+            <input type="text" id="name_field" name="name" value="<%= student.name %>">
+        </p>
+        <p>
+            <label for="first_surname_field">Primer apellido: </label>
+            <input type="text" id="first_surname_field" name="first_surname" value="<%= student.first_surname %>">
+        </p>
+        <p>
+            <label for="second_surname_field">Segundo apellido: </label>
+            <input type="text" id="second_surname_field" name="second_surname" value="<%= student.second_surname %>">
+        </p>
+        <p>
+            <label for="personal_email_field">Email personal: </label>
+            <input type="email" id="personal_email_field" name="email_personal" value="<%= student.email_personal %>">
+        </p>
+        <p>
+            <label for="activa_email_field">Email Xarxatec Activa: </label>
+            <input type="email" id="activa_email_field" name="email_activa" value="<%= student.email_activa %>">
+        </p>
+        <p>
+            <label for="phone_field">Teléfono: </label>
+            <input type="tel" id="phone_field" name="phone_number" value="<%= student.phone_number %>">
+        </p>
+        <p>
+            <label for="zip_code_field">Código postal: </label>
+            <input type="text" id="zip_code_field" name="zip_code" value="<%= student.zip_code %>">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="id" value="<%= student.id %>">
+    </form>
+</body>
+</html>

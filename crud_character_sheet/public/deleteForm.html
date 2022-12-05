@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/createStudentOptions.js" async></script>
+    <title>Borrar estudiante</title>
+</head>
+<body>
+    <form action="/students" method="post">
+        <p><label for="id_student">Elige el estudiante que quieres borrar de la BD: </label>
+            <select name="student" id="id_student">
+            </select>
+        </p>
+        <p><input type="submit" value="Confirmar"></p>
+        <input type="hidden" name="_method" value="delete">
+    </form>
+</body>
+</html>

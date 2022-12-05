@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="scripts/deleteStudentButton.js" async></script>
+    <title>Listado Estudiantes</title>
+</head>
+<body>
+    <h1>Listado Estudiantes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Controles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((student)=>{ %>
+                <tr>
+                    <td><%= student.name %></td>
+                    <td><%= student.first_surname %></td>
+                    <td><%= student.email_personal %></td>
+                    <td><i class="fa fa-trash" value="<%= student.id %>"></i></td>
+                </tr>
+            <% }); %>            
+        </tbody>
+    </table>
+</body>
+</html>
